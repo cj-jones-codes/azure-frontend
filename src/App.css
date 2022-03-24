@@ -1,0 +1,116 @@
+html {
+  font-size: 12px;
+  color: #101010;
+}
+
+body {
+  background-color: #fff;
+}
+
+.outerdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #953;
+}
+
+.innerdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: 810px;
+  background-color: #fff;
+}
+
+#main-header-container {
+  text-align: center;
+  margin-top: 40px;
+  width: 70%
+}
+
+.header-greeting {
+  font-size: 36px;
+}
+
+#main-header-span {
+  color: #47a;
+}
+
+.header-details {
+  font-size: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+input {
+  font-size: 18px;
+  height: 30px;
+  border: 3px solid #258;
+  box-shadow: -3px 3px #258;
+  padding-left: 10px;
+  color: #101010;
+}
+
+input:focus {
+  background-color: #47a;
+  color: #fff;
+}
+
+.submit-button {
+  margin-top: 30px;
+  margin-bottom: 48px;
+  font-size: 24px;
+  height: 48px;
+  border-radius: 20px;
+  background-color: #47a;
+  color: #fff;
+  border: 5px solid #258;
+  box-shadow: -5px 5px #101010;
+}
+
+.submit-button:hover {
+  background-color: #258;
+}
+
+#validityCheck {
+  font-size: 24px;
+  font-weight: 700;
+  color: #a22;
+}
+
+#findId-header-container {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 120px;
+  width: 70%
+}
+
+#notfound-header {
+  font-size: 180px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #a22;
+}
+
+#notfound-body {
+  margin-top: 10px;
+  font-size: 72px;
+}
+
+#notfound-inner {
+  justify-content: center;
+}
