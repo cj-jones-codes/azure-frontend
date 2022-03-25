@@ -59,7 +59,7 @@ function MainBody() {
         let responseStatus;
         let responseData;
 
-        const url = "https://springazure.azurewebsites.net"
+        const url = "http://localhost:8080"
 
         const newUser = {
             firstName: formData.firstName,
@@ -72,7 +72,7 @@ function MainBody() {
                 responseStatus = response.status;
                 responseData = response.data;
                 if (responseStatus === 200) {
-                    if (responseData === true || responseData.result === true) {
+                    if (responseData || responseData.result) {
                         navigate("/findId")
                     } else {
                         document.getElementById("validityCheck").innerHTML="Error occured, it's possible that you're copying someone else's work!";
