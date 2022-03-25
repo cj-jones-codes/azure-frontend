@@ -3,7 +3,7 @@ import axios from "axios";
 
 function FindIdBody() {
 
-    const url = "https://springazure.azurewebsites.net";
+    const url = "http://localhost:8080";
 
     const [formData, setFormData] = useState({
         id: -1,
@@ -22,11 +22,20 @@ function FindIdBody() {
     const handleSearch = (event) => {
         event.preventDefault();
         axios.get(`${url}/users/${id}`)
-        .then(response => setFormData(response.data))
+        .then(response => {
+            setFormData(response.data);
+            document.getElementById("returnInfo").innerHTML=
+            `First Name: ${response.data.firstName}, 
+            Last Name: ${response.data.lastName}, 
+            Email: ${response.data.email}`;
+        }
+        )
         .catch((error) => setFormData({
             ...formData,
-            name: "No user found",
-            email: ""
+            firstName: "No user found",
+            lastName: "No user found",
+            email: "",
+            password: "",
         }))
     }
 
@@ -40,6 +49,9 @@ function FindIdBody() {
         </form>
         <div className="id-check-div">
             <p id="idCheck"></p>
+        </div>
+        <div id="return-div">
+            <p id="returnInfo"></p>
         </div>
     </>
     )
